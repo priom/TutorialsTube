@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% load staticfiles %}
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- JQUERY JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/video">TutorialsTube</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+{#          <form class="navbar-form navbar-right">#}
+{#            <div class="form-group">#}
+{#              <input type="text" class="form-control" placeholder="Search">#}
+{#            </div>#}
+{#            <button type="submit" class="btn btn-default">Submit</button>#}
+{#          </form>#}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://priom.github.io/" target="_blank">ABOUT ME</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron" id="heading">
+        <div class="container">
+             <h1>Welcome to TutorialsTube</h1>
+        </div>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="jumbotron" id="credits">
+        <div class="container">
+            <h2>Technologies Used</h2>
+            <br>
+             <div class="col-md-4 col-xs-4">
+                 <img src="https://www.djangoproject.com/m/img/logos/django-logo-positive.png" alt="Django" width="100%" height="auto">
+             </div>
+             <div class="col-md-4 col-xs-4">
+                 <img src="https://www.postgresql.org/media/img/about/press/slonik_with_black_text_and_tagline.gif" alt="PostgreSQL" width="100%" height="auto">
+             </div>
+            <div class="col-md-4 col-xs-4">
+                 <img src="https://www.redhat.com/cms/managed-files/Logotype_RH_OpenShiftEnterprise_wLogo_CMYK_Gray.jpg" alt="OpenShift RHEL" width="100%" height="auto">
+             </div>
+        </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="copyright">Brought to you by <a href="http://priom.github.io">PrioM</a></p>
+      </div>
+    </div>
+</body>
+</html>

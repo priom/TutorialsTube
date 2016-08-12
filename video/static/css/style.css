@@ -1,0 +1,35 @@
+/*  NAVBAR  */
+.navbar {
+    background-color: black;
+}
+/********************************************************/
+
+/*  JUMBOTRON  */
+.jumbotron {
+    background-color: whitesmoke;
+}
+.jumbotron h1 {
+    text-align: center;
+    color: #000;
+}
+#heading {
+    padding-top: 68px;
+}
+/********************************************************/
+#video-details {
+    padding: 30px;
+}
+
+
+/*  FOOTER  */
+#credits {
+    background-color: #fff;
+}
+#footer {
+    background-color: black;
+    padding: 20px;
+}
+.copyright {
+    color: #fff;
+}
+/********************************************************/
